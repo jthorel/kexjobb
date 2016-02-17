@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0468F77B1C74D327002D1B94 /* tag.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0468F77A1C74D327002D1B94 /* tag.wav */; };
+		049196EF1C71F88E00A4D24F /* bajs.wav in Resources */ = {isa = PBXBuildFile; fileRef = 049196EE1C71F88E00A4D24F /* bajs.wav */; };
 		04BD73F41C6CE380005B82A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD73F31C6CE380005B82A1 /* AppDelegate.swift */; };
 		04BD73F61C6CE380005B82A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD73F51C6CE380005B82A1 /* ViewController.swift */; };
 		04BD73F91C6CE380005B82A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BD73F71C6CE380005B82A1 /* Main.storyboard */; };
@@ -25,7 +27,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		049196EA1C71E11500A4D24F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0468F77A1C74D327002D1B94 /* tag.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tag.wav; sourceTree = SOURCE_ROOT; };
+		049196EE1C71F88E00A4D24F /* bajs.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bajs.wav; sourceTree = "<group>"; };
 		04BD73F01C6CE380005B82A1 /* kex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BD73F31C6CE380005B82A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BD73F51C6CE380005B82A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +98,8 @@
 				04BD73F51C6CE380005B82A1 /* ViewController.swift */,
 				04BD73F71C6CE380005B82A1 /* Main.storyboard */,
 				04BD73FA1C6CE380005B82A1 /* Assets.xcassets */,
+				049196EE1C71F88E00A4D24F /* bajs.wav */,
+				0468F77A1C74D327002D1B94 /* tag.wav */,
 				04BD73FC1C6CE380005B82A1 /* LaunchScreen.storyboard */,
 				04BD73FF1C6CE380005B82A1 /* Info.plist */,
 			);
@@ -106,6 +125,7 @@
 				04BD73EC1C6CE380005B82A1 /* Sources */,
 				04BD73ED1C6CE380005B82A1 /* Frameworks */,
 				04BD73EE1C6CE380005B82A1 /* Resources */,
+				049196EA1C71E11500A4D24F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,6 +201,8 @@
 				04BD73FE1C6CE380005B82A1 /* LaunchScreen.storyboard in Resources */,
 				04BD73FB1C6CE380005B82A1 /* Assets.xcassets in Resources */,
 				04BD73F91C6CE380005B82A1 /* Main.storyboard in Resources */,
+				0468F77B1C74D327002D1B94 /* tag.wav in Resources */,
+				049196EF1C71F88E00A4D24F /* bajs.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,11 +352,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = kex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = j.kex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = ./kex/audio.h;
+				USER_HEADER_SEARCH_PATHS = "~/Downloads/AudioKit-2.3/**";
 			};
 			name = Debug;
 		};
@@ -344,11 +373,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = kex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = j.kex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = ./kex/audio.h;
+				USER_HEADER_SEARCH_PATHS = "~/Downloads/AudioKit-2.3/**";
 			};
 			name = Release;
 		};
